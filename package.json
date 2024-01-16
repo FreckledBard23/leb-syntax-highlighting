@@ -1,0 +1,25 @@
+{
+  "name": "leb-syntax-highlighting",
+  "displayName": "LEB Syntax Highlighting",
+  "description": "Syntax Highlighting for using the LEB32 CPU (github.com/FreckledBard23/LEB32)",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "leb",
+      "aliases": ["LEB", "leb"],
+      "extensions": [".leb"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "leb",
+      "scopeName": "source.leb",
+      "path": "./syntaxes/leb.tmLanguage.json"
+    }]
+  }
+}

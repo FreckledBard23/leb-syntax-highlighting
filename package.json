@@ -19,7 +19,7 @@
     "grammars": [{
       "language": "leb",
       "scopeName": "source.leb",
-      "path": "./syntaxes/leb.tmLanguage.json"
+      "path": "./syntaxes/leb.tmGrammar.json"
     }]
   }
 }

@@ -1,0 +1,66 @@
+{
+    "scopeName": "source.leb",
+    "patterns": [{"include": "#loop"},
+				 {"include": "#gotos"},
+				 {"include": "#regs"},
+				 {"include": "#memory"},
+				 {"include": "#operators"},
+				 {"include": "#expressions"},
+				 {"include": "#numbers"},
+				 {"include": "#comments"}],
+    "repository": {
+        "loop": {
+			"patterns": [{
+				"name": "keyword.control.leb",
+				"match": "\\b(if|while|repeat)\\b"
+			}]
+		},
+		"expressions": {
+			"patterns": [{
+				"name": "keyword.leb",
+				"match": "\\b(set|result|define|undefine)\\b"
+			}]
+		},
+		"operators": {
+			"patterns": [{
+				"name": "variable.leb",
+				"match": "\\b(as|to|into|of)\\b"
+			}]
+		},
+		"memory": {
+			"patterns": [{
+				"name": "entity.name.function.leb",
+				"match": "\\b(push|store|read|pop|pixel|goto)\\b"
+			}]
+		},
+		"regs": {
+			"patterns": [{
+				"name": "string.quoted.double.leb",
+				"match": "\\b(a|b|c|d|e|f|g|h|j|k|l|m|n|o|p)\\b"
+			}]
+		},
+		"gotos": {
+			"name": "string.quoted.double.leb",
+			"begin": ":",
+			"end": ":",
+			"patterns": [
+				{
+					"name": "string.quoted.double.leb",
+					"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+				}
+			]
+		},
+		"numbers": {
+			"name": "constant.numeric.leb",
+			"patterns": [
+                {"name": "constant.numeric.decimal.leb", "match": "\\b\\d+\\b"},
+                {"name": "constant.numeric.hex.leb", "match": "\\b0x[0-9A-Fa-f]+\\b"},
+                {"name": "constant.numeric.binary.leb", "match": "\\b0b[01]+\\b"}
+            ]
+		},
+		"comments": {
+			"name": "comment.line.double-slash.leb",
+			"match": "//.*?$"
+		}
+    }
+}

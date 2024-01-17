@@ -30,7 +30,7 @@
 		"memory": {
 			"patterns": [{
 				"name": "entity.name.function.leb",
-				"match": "\\b(push|store|read|pop|pixel|goto)\\b"
+				"match": "\\b(push|store|read|pop|pixel|goto|end)\\b"
 			}]
 		},
 		"regs": {

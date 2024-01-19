@@ -36,7 +36,7 @@
 		"regs": {
 			"patterns": [{
 				"name": "string.quoted.double.leb",
-				"match": "\\b(a|b|c|d|e|f|g|h|j|k|l|m|n|o|p)\\b"
+				"match": "\\b(a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p)\\b"
 			}]
 		},
 		"gotos": {
